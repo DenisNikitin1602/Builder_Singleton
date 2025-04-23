@@ -43,8 +43,8 @@ public class Person {
         return surname;
     }
 
-    public int getAge() {
-        return age.getAsInt();
+    public OptionalInt getAge() {
+        return age;
     }
 
     public String getAddress() {
@@ -66,7 +66,7 @@ public class Person {
         dataPerson.append(getName() + " ");
         dataPerson.append(getSurname());
         if (hasAge()) {
-            dataPerson.append(", возраст: " + getAge());
+            dataPerson.append(", возраст: " + getAge().getAsInt());
         } else {
             dataPerson.append(", возраст неизвестен");
         }
